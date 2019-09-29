@@ -21,7 +21,11 @@
 
 */
 
-// 1. game starts with RANDOM NUMBER displayed
+// 1. User clicks start to begin
+
+$()
+
+// 2. game starts with RANDOM NUMBER displayed
 var randomNumber = Math.floor(Math.random() * 50);
 $("#random-number").html(randomNumber);
     
@@ -36,15 +40,27 @@ $("#random-number").html(randomNumber);
     //game starts with zero on the counter
     var totalScore = 0;
 
-// 2.  when user clicks CRYSTAL BUTTON
+// 3.  when user clicks CRYSTAL BUTTON
+
+var crystalValues = [3, 6, 4, 7];
+
+var crystalImages = ["./assets/images/carole-smile-SSoCY-Xi3iY-unsplash.jpg", "./assets/images/carole-smile-SSoCY-Xi3iY-unsplash.jpg", "./assets/images/carole-smile-SSoCY-Xi3iY-unsplash.jpg"];
 
 //***dev note: add an attribute for each button that holds the increments 
 
-var increments = [6, 4, 3, 7];
+for (var i = 0; i < crystalValues.length; i++) {
+    var crystalDisplay = $("<img>");
+    crystalDisplay.attr("crystal-data-value", crystalValues[i]);
+    crystalDisplay.addClass("crystal-image");
 
-for (var i = 0; i < length.increments; i++) {
-
+    for (var j = 0; j < crystalImages.length; j++) {
+        
+        crystalDisplay.attr("src", crystalImages[j]);
+    };
     
+    
+    $(".crystals").append(crystalDisplay);
+       
 };
 
     $(".crystal-image").on("click", function() {
@@ -55,10 +71,14 @@ for (var i = 0; i < length.increments; i++) {
         
         alert("New score " + totalScore + " !")
 
+    // 4. user wins if
+        //- TOTAL SCORE = RANDOM NUMBER
         if(totalScore === randomNumber) {
             alert("You win!");
             wins++; 
-    
+
+    // 5. user loses if
+        // - TOTAL SCORE > RANDOM NUMBER 
         } else if (totalScore > randomNumber) {
             alert("You lose!");
             losses++; 
@@ -66,15 +86,7 @@ for (var i = 0; i < length.increments; i++) {
         
     });
 
-    
-
-// 3. user wins if
-        //- TOTAL SCORE = RANDOM NUMBER
-    
-// 4. user loses if
-        // - TOTAL SCORE > RANDOM NUMBER 
-
-// 5. when user wins or loses, game restarts
+// 6. when user wins or loses, game restarts
         // - new RANDOM NUMBER
         // - new CRYSTAL BUTTON VALUE 
 
