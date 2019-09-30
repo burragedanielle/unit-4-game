@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,9 @@
 
     <!-- css scripts  -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
     <!-- jQuery library -->
@@ -16,28 +20,37 @@
     <title>Crystal Game</title>
 
 </head>
+
 <body>
-    <!-- head content and instructions -->
-    <h1>Crystal Game</h1>
+    <div class="container">
+        
+        <h1>Crystal Game</h1>
+
         <h2>How To Start</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis illum quo fuga vero aperiam animi rerum nesciunt, corrupti error debitis optio beatae voluptatibus itaque ut perferendis fugit facilis praesentium.</p>
+        <p>Press start to begin. Try to match the number given to you by pressing the crystals.</p>
         <button id="start-button">Start Game</button>
 
-    <!-- div for wins and losses -->
-    <div id="wins"></div>
-    <div id="losses"></div>
 
-    <!-- div for scores 
-    1. We need a div for the users total score
-    2. We need a div for the number the user will be guessing-->
-    <div id="user-total-score"></div> 
-    <div id="random-number"></div>
+        <!-- div for wins and losses -->
 
-    <!-- div crystal buttons  -->
+        <div id="losses"></div>
+        <div id="wins"></div>
 
-    <div class="crystals"></div>
+        <!-- div for scores 
+            1. We need a div for the users total score
+            2. We need a div for the number the user will be guessing-->
+        <div id="user-total-score"></div>
+        <div id="random-number"></div>
+
+
+        <!-- div crystal buttons  -->
+
+        <div class="crystals"></div>
+
+    </div>
 
     <!-- javascript -->
-    <script type="text/javascript" src="/assets/javascript/game.js" ></script>
+    <script type="text/javascript" src="/assets/javascript/game.js"></script>
 </body>
+
 </html>
