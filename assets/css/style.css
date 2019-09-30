@@ -1,6 +1,11 @@
 h1 {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 5em;
+    font-size: 4em;
+    margin-top: .75em;
+}
+
+h5 {
+    font-size: 1.2em;
 }
 
 body {
@@ -8,23 +13,39 @@ body {
     background-color: #7DBEF4;
     color: #fff;
     text-align: center;
+    padding-top: 20px;
 }
 
 button {
     color: #7DBEF4;
+    font-family: 'Archivo Black', sans-serif;
     background-color: #fff;
     border-radius: 50px;
     text-transform: uppercase;
     padding: .5em 1em;
+    margin-bottom: 1em;
+    width: 20em;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .container {
     display: flex; 
     flex-direction: column;
+    justify-content: center;
 }
 
 
 .crystal-image {
     width: 250px;
     padding: 5px;
+}
+
+#random-number {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.4em;
 }

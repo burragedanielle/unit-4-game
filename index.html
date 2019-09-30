@@ -27,20 +27,35 @@
         <h1>Crystal Game</h1>
 
         <h2>How To Start</h2>
-        <p>Press start to begin. Try to match the number given to you by pressing the crystals.</p>
-        <button id="start-button">Start Game</button>
-
-
-        <!-- div for wins and losses -->
-
-        <div id="losses"></div>
-        <div id="wins"></div>
+        <p>Press start to begin. Each crystal has a numeric value. Collect the same number of crystals as the given value to win!</p>
+        <button class="mx-auto" id="start-button">Start Game</button>
 
         <!-- div for scores 
             1. We need a div for the users total score
             2. We need a div for the number the user will be guessing-->
-        <div id="user-total-score"></div>
-        <div id="random-number"></div>
+            <h5>Collect this many crystals</h5>
+            <div id="random-number"></div>
+            
+            <h5>You have collected...</h5>
+            <div id="user-total-score"></div>
+        
+        <!-- div for wins and losses -->
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mt-3 mx-auto">
+                    <h5>wins</h5>
+                    <div id="wins"></div>
+                </div>
+
+                <div class="col-4 mt-3 mx-auto">
+                    <h5>losses</h5>
+                    <div id="losses"></div>
+                </div>
+            </div>
+        </div>
+
+        
 
 
         <!-- div crystal buttons  -->
