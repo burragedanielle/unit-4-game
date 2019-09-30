@@ -48,6 +48,12 @@ var randomNumber = Math.floor(Math.random() * 50);
 
 function reset(){
     totalScore = 0;
+    $("#user-total-score").html(totalScore);
+
+    randomNumber = Math.floor(Math.random() * 50);
+    $("#random-number").html(randomNumber);
+
+    
 };
 
 
@@ -67,7 +73,7 @@ for (var i = 0; i < crystalValues.length; i++) {
 
 
 $("#start-button").on("click", function() {
-    randomNumber = Math.floor(Math.random() * 50);
+    randomNumber = Math.floor(Math.random() * 50 + 1);
     $("#random-number").html(randomNumber);
     $("#start-button").html("Restart Game");
 
